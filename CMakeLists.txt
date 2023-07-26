@@ -5,7 +5,7 @@ include(cmake/prelude.cmake)
 project(
     swift-common
     VERSION 0.1.0
-    DESCRIPTION "general c++ library with a focus on build times and developer experience"
+    DESCRIPTION "general c++ library with a focus on build time and developer experience"
     HOMEPAGE_URL "https://github.com/btmxh/swift-common"
     LANGUAGES CXX
 )
