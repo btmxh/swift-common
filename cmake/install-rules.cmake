@@ -14,7 +14,6 @@ set(package swift-common)
 install(
     DIRECTORY
     include/
-    "${PROJECT_BINARY_DIR}/export/"
     DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}"
     COMPONENT swift-common_Development
 )
