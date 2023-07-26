@@ -21,16 +21,9 @@ add_library(
 )
 add_library(swift-common::swift-common ALIAS swift-common_swift-common)
 
-include(GenerateExportHeader)
-generate_export_header(
-    swift-common_swift-common
-    BASE_NAME swift-common
-    EXPORT_FILE_NAME export/swift-common/swift-common_export.hpp
-    CUSTOM_CONTENT_FROM_VARIABLE pragma_suppress_c4251
-)
-
-if(NOT BUILD_SHARED_LIBS)
-  target_compile_definitions(swift-common_swift-common PUBLIC SWIFT_COMMON_STATIC_DEFINE)
+if(BUILD_SHARED_LIBS)
+    message(WARNING "swift-common does not support building to a shared library."
+                    "Setting BUILD_SHARED_LIBS to ON will have no effect")
 endif()
 
 set_target_properties(
